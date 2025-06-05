@@ -1,0 +1,27 @@
+package xyz;
+import java.util.Scanner;
+
+public class Palindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a word: ");
+        String original = sc.nextLine();
+        
+        StringBuilder reversedBuilder = new StringBuilder();
+
+        for (int i = original.length() - 1; i >= 0; i--) {
+            reversedBuilder.append(original.charAt(i));
+        }
+
+        String reversed = reversedBuilder.toString();
+
+        if (original.equals(reversed)) {
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not a palindrome");
+        }
+
+        sc.close();
+    }
+}
